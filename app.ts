@@ -7,7 +7,7 @@ import {isPositiveInteger} from "./utilities";
 dotenv.config();
 
 const app: Express = express();
-const port = process.env.PORT;
+const port = process.env.PORT || 3000;
 
 function authentication(req, res, next) {
     const authheader = req.headers.authorization;
